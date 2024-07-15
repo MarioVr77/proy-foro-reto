@@ -1,0 +1,68 @@
+package com.alura.forohub.domain.usuario;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.List;
+
+@Table(name = "usuarios")
+@Entity(name = "Usuario")
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
+public class Usuario implements UserDetails {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nombre;
+    private String correoElectronico;
+    private String contrasena;
+    private String perfiles;
+    private Boolean activo;
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        // Devuelve una lista con el rol ROLE_USER para este usuario
+        return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+    }
+
+    @Override
+    public String getPassword() {
+        return contrasena;
+    }
+
+    @Override
+    public String getUsername() {
+        return correoElectronico;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true; // La cuenta nunca expira
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true; // La cuenta nunca está bloqueada
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true; // Las credenciales nunca expiran
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true; // El usuario está activo
+    }
+}
