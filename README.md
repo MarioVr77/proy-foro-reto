@@ -53,29 +53,6 @@ El challenge Foro Hub consiste en una API REST para la gestión de un foro que p
 - `spring-security-test`: Para pruebas de seguridad.
 - `java-jwt`: Para trabajar con JSON Web Tokens.
 
-## Imágenes
-
-1. Autenticación exitosa
-   ![Autenticación exitosa](url-de-la-imagen)
-2. Eliminación de un tópico
-   ![Eliminar Tópico](url-de-la-imagen)
-3. Modificación del título de un tópico
-   ![Modificar Título](url-de-la-imagen)
-4. Error de autenticación
-   ![Error de Autenticación](url-de-la-imagen)
-5. Registro exitoso de un tópico
-   ![Registrar Tópico Correcto](url-de-la-imagen)
-6. Intento de inicio de sesión fallido
-   ![Bad Login](url-de-la-imagen)
-7. Error de recurso no encontrado
-   ![Error Not Found](url-de-la-imagen)
-8. Tópico duplicado
-   ![Tópico Duplicado](url-de-la-imagen)
-9. Detalle de un tópico
-   ![Detallar Tópico](url-de-la-imagen)
-10. Listado de tópicos
-    ![Listar Tópicos](url-de-la-imagen)
-
 ## Instalación y Ejecución
 
 1. Clonar el repositorio:
