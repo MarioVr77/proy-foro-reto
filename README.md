@@ -8,8 +8,6 @@
 - [Características](#características)
 - [Tecnologías Usadas](#tecnologías-usadas)
 - [Dependencias](#dependencias)
-- [Imágenes](#imágenes)
-- [Instalación y Ejecución](#instalación-y-ejecución)
 - [Uso](#uso)
 - [Estado del Proyecto](#estado-del-proyecto)
 
@@ -53,24 +51,6 @@ El challenge Foro Hub consiste en una API REST para la gestión de un foro que p
 - `spring-security-test`: Para pruebas de seguridad.
 - `java-jwt`: Para trabajar con JSON Web Tokens.
 
-## Instalación y Ejecución
-
-1. Clonar el repositorio:
-    ```bash
-    git clone https://github.com/user-name-c/forohub_challenge.git
-    ```
-
-2. Navegar al directorio del proyecto:
-    ```bash
-    cd forohub_challenge
-    ```
-
-3. Configurar las propiedades de la base de datos en `application.properties`.
-
-4. Ejecutar la aplicación:
-    ```bash
-    mvn spring-boot:run
-    ```
 
 ## Uso
 
